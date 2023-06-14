@@ -1,0 +1,42 @@
+{
+    "local": {
+        "type": "directory",
+        "path": "local",
+        "tamano": 4,
+        "content": {
+            "Archivo.txt": {
+                "type": "file",
+                "path": "",
+                "content": "Hola mundo"
+            },
+            "subdir": {
+                "type": "directory",
+                "path": "local",
+                "content": {
+                    "juan": {
+                        "type": "directory",
+                        "path": "local/subdir/juan",
+                        "content": {
+                            "Datos.txt": {
+                                "type": "file",
+                                "path": "",
+                                "content": "Contenido del archivo"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "compartido": {
+        "type": "directory",
+        "path": "compartido",
+        "tamano": 10,
+        "content": {}
+    },
+    "User": {
+        "type": "none",
+        "path": "j",
+        "capacidad": 67
+    }
+}

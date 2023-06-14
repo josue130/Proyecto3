@@ -1,0 +1,55 @@
+{
+    "local": {
+        "type": "directory",
+        "content": {
+            "archivo.txt": {
+                "type": "file",
+                "content": "Contenido del archivo"
+            },
+            "archivo1.txt": {
+                "type": "file",
+                "content": "Contenido del archivo"
+            },
+            "subdir": {
+                "type": "directory",
+                "content": {
+                    "archivo1.txt": {
+                        "type": "file",
+                        "content": "Contenido del archivo"
+                    },
+                    "josue": {
+                        "type": "directory",
+                        "content": {
+                            "Datos.txt": {
+                                "type": "file",
+                                "content": "Contenido del archivo"
+                            },
+                            "juan": {
+                                "type": "directory",
+                                "content": {
+                                    "Datos.txt": {
+                                        "type": "file",
+                                        "content": "Contenido del archivo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "Videos": {
+                "type": "directory",
+                "content": {
+                    "VideosDatos.txt": {
+                        "type": "file",
+                        "content": "Contenido del archivo"
+                    }
+                }
+            }
+        }
+    },
+    "compartido": {
+        "type": "directory",
+        "content": {}
+    }
+}

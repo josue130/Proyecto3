@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Archivos</title>
+    <style>
+        .directory {
+            margin-left: 20px;
+        }
+
+        .file {
+            margin-left: 40px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function mostrarOpcionesArchivo(nombre,path) {
+            var opciones = {
+                "Crear archivo": function() {
+                    document.getElementById("nombre-input").style.display= "block";
+                    document.getElementById("contenido-input").style.display= "block";
+                    document.getElementById("Boton-crear-archivo").style.display= "block";
+
+                    document.getElementById("ruta-input").value = path;
+                },
+                "Seleccionar": function() {
+                    // Lógica para la acción "seleccionar"
+                    alert("Seleccionar archivo: " + nombre);
+                },
+                "Info": function() {
+                    // Lógica para la acción "info"
+                    alert("Información del archivo: " + nombre);
+                }
+            };
+
+            var seleccion = prompt("Selecciona una opción para el archivo: " + nombre, Object.keys(opciones).join(", "));
+
+            if (seleccion && opciones[seleccion]) {
+                opciones[seleccion]();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="/Main/" method="post">
+        {% csrf_token %}
+        <h1>Archivo simulado</h1>
+        <ul>
+          {{ data|safe }}
+        </ul>
+        <div id="contenedor-formulario">
+          <input type="hidden" name="ruta" id="ruta-input" value="" >
+          <input type="text" name="nombre" id="nombre-input" value="" placeholder="Nombre archivo">
+          <input type="text" name="contenido" id="contenido-input" value="" placeholder="Contenido archivo">
+        </div>
+        <button type="submit" id ="Boton-crear-archivo">Añadir</button>
+        <script>
+             document.getElementById("ruta-input").style.display= "none";
+             document.getElementById("nombre-input").style.display= "none";
+             document.getElementById("contenido-input").style.display= "none";
+             document.getElementById("Boton-crear-archivo").style.display= "none";
+            
+        </script>
+    </form>
+</body>
+</html>
