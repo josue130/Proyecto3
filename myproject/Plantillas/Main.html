@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mostrar Archivos</title>
+    <title>File System</title>
     <style>
         .directory {
             margin-left: 20px;
@@ -44,22 +44,21 @@
 <body>
     <form action="/Main/" method="post">
         {% csrf_token %}
-        <h1>Archivo simulado</h1>
+        <h1>File System</h1>
         <ul>
-          {{ data|safe }}
+            {{ data|safe }}
         </ul>
         <div id="contenedor-formulario">
-          <input type="hidden" name="ruta" id="ruta-input" value="" >
-          <input type="text" name="nombre" id="nombre-input" value="" placeholder="Nombre archivo">
-          <input type="text" name="contenido" id="contenido-input" value="" placeholder="Contenido archivo">
+            <input type="hidden" name="ruta" id="ruta-input" value="" >
+            <input type="text" name="nombre" id="nombre-input" value="" placeholder="Nombre archivo">
+            <input type="text" name="contenido" id="contenido-input" value="" placeholder="Contenido archivo">
         </div>
         <button type="submit" id ="Boton-crear-archivo">Añadir</button>
         <script>
-             document.getElementById("ruta-input").style.display= "none";
-             document.getElementById("nombre-input").style.display= "none";
-             document.getElementById("contenido-input").style.display= "none";
-             document.getElementById("Boton-crear-archivo").style.display= "none";
-            
+            document.getElementById("ruta-input").style.display= "none";
+            document.getElementById("nombre-input").style.display= "none";
+            document.getElementById("contenido-input").style.display= "none";
+            document.getElementById("Boton-crear-archivo").style.display= "none";
         </script>
     </form>
 </body>

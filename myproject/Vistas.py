@@ -12,7 +12,7 @@ User_actual= ''
 @csrf_exempt
 def Main(request):
     global User_actual
-    doc_externo = open("C:/Users/Josue/Desktop/Semestre I 2023/Operativos/Proyecto 3/myproject/myproject/Plantillas/Main.html")
+    doc_externo = open("C:/Users/gerso/OneDrive/Desktop/COMPUTACION/Sistemas Operativos - S1-2023/Proyecto 3/myproject/Plantillas/Main.html")
     plt = Template(doc_externo.read())
     with open(User_actual, 'r') as file:
         data = json.load(file)
